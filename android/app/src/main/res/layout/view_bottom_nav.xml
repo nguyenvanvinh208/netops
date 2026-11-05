@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/nav"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/stroke" />
+    <LinearLayout
+        android:id="@+id/nav_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="8dp"
+        android:divider="@drawable/gap_4"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:divider="@drawable/gap_4"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <FrameLayout android:layout_width="24dp"
+                android:layout_height="24dp">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_grid"
+                    android:tint="@color/dim" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Med"
+                android:textSize="10sp"
+                android:textColor="@color/dim"
+                android:text="Overview" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:divider="@drawable/gap_4"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <FrameLayout android:layout_width="24dp"
+                android:layout_height="24dp">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_box"
+                    android:tint="@color/dim" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Med"
+                android:textSize="10sp"
+                android:textColor="@color/dim"
+                android:text="Containers" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:divider="@drawable/gap_4"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <FrameLayout android:layout_width="24dp"
+                android:layout_height="24dp">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_db"
+                    android:tint="@color/dim" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Med"
+                android:textSize="10sp"
+                android:textColor="@color/dim"
+                android:text="Database" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:divider="@drawable/gap_4"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <FrameLayout android:layout_width="24dp"
+                android:layout_height="24dp">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_bell"
+                    android:tint="@color/dim" />
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:background="@drawable/bg_oval_f_red_s_nav_w2"
+                    android:layout_gravity="top|end"
+                    android:layout_marginEnd="1dp" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Med"
+                android:textSize="10sp"
+                android:textColor="@color/dim"
+                android:text="Alerts" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:divider="@drawable/gap_4"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <FrameLayout android:layout_width="24dp"
+                android:layout_height="24dp">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_user"
+                    android:tint="@color/dim" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Med"
+                android:textSize="10sp"
+                android:textColor="@color/dim"
+                android:text="Profile" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/nav_pill_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <FrameLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+            <View android:layout_width="134dp"
+                android:layout_height="5dp"
+                android:background="@drawable/bg_f_whitea35_r99"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

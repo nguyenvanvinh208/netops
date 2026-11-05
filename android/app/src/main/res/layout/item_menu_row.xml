@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <TextView
+        android:id="@+id/mr_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/T.Med"
+        android:textSize="14sp"
+        android:textColor="@color/text"
+        android:text="" />
+    <TextView
+        android:id="@+id/mr_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp"
+        style="@style/T.Semi"
+        android:textSize="11sp"
+        android:textColor="@color/cyan"
+        android:text="" />
+</LinearLayout>

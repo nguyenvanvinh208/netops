@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/env_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="@drawable/bg_f_card_s_stroke_w1_r22"
+    android:divider="@drawable/gap_14"
+    android:showDividers="middle"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:divider="@drawable/gap_14"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+        <FrameLayout android:id="@+id/env_tile"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/env_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_cloud"
+                android:tint="@color/cyan" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/gap_4"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/env_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/text"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/env_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    style="@style/T.Semi"
+                    android:textSize="11sp"
+                    android:textColor="@color/text"
+                    android:text=""
+                    android:letterSpacing="0.027" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/env_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="13sp"
+                android:textColor="@color/muted"
+                android:text="" />
+        </LinearLayout>
+        <FrameLayout android:id="@+id/env_check"
+            android:layout_width="26dp"
+            android:layout_height="26dp">
+            <ImageView
+                android:id="@+id/env_check_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_check"
+                android:tint="@color/on_cyan" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/stroke" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:divider="@drawable/gap_8"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+        <View android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/bg_oval_f_green" />
+        <TextView
+            android:id="@+id/env_servers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Semi"
+            android:textSize="13sp"
+            android:textColor="@color/text"
+            android:text="" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Reg"
+            android:textSize="13sp"
+            android:textColor="@color/dim"
+            android:text="·" />
+        <TextView
+            android:id="@+id/env_ping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Reg"
+            android:textSize="13sp"
+            android:textColor="@color/muted"
+            android:text="" />
+    </LinearLayout>
+</LinearLayout>

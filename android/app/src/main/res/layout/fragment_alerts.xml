@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="4dp"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/gap_2"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/hdr_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="24sp"
+                android:textColor="@color/text"
+                android:text="Alerts"
+                android:letterSpacing="-0.017" />
+            <TextView
+                android:id="@+id/hdr_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="13sp"
+                android:textColor="@color/muted"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:divider="@drawable/gap_12"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/chips_al"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:id="@+id/al_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_12"
+                android:showDividers="middle"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

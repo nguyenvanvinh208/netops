@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_weight="1"
+    android:gravity="center_horizontal"
+    android:divider="@drawable/gap_10"
+    android:showDividers="middle"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <FrameLayout android:layout_width="64dp"
+        android:layout_height="64dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/T.Bold"
+            android:textSize="26sp"
+            android:textColor="@color/ink"
+            android:text="M" />
+        <ImageView
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:src="@drawable/ic_shield"
+            android:tint="@color/ink" />
+    </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/T.Med"
+        android:textSize="11sp"
+        android:textColor="@color/muted"
+        android:text="" />
+</LinearLayout>

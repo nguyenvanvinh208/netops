@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/sv_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="@drawable/bg_f_card_s_stroke_w1_r18"
+    android:divider="@drawable/gap_10"
+    android:showDividers="middle"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:divider="@drawable/gap_10"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+        <FrameLayout android:id="@+id/sv_tile"
+            android:layout_width="36dp"
+            android:layout_height="36dp">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_server"
+                android:tint="@color/blue" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/gap_2"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/sv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="14sp"
+                android:textColor="@color/text"
+                android:text="" />
+            <TextView
+                android:id="@+id/sv_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/sv_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            style="@style/T.Semi"
+            android:textSize="11sp"
+            android:textColor="@color/green"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/gap_12"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="@drawable/gap_4"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/T.Med"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:text="CPU" />
+            <TextView
+                android:id="@+id/sv_0_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Semi"
+                android:textSize="11sp"
+                android:textColor="@color/text"
+                android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:weightSum="1"
+            android:background="@drawable/bg_f_stroke_r2"
+            android:orientation="horizontal">
+            <View android:id="@+id/sv_0_f"
+                android:layout_width="0dp"
+                android:layout_height="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="@drawable/gap_4"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/T.Med"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:text="RAM" />
+            <TextView
+                android:id="@+id/sv_1_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Semi"
+                android:textSize="11sp"
+                android:textColor="@color/text"
+                android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:weightSum="1"
+            android:background="@drawable/bg_f_stroke_r2"
+            android:orientation="horizontal">
+            <View android:id="@+id/sv_1_f"
+                android:layout_width="0dp"
+                android:layout_height="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="@drawable/gap_4"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/T.Med"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:text="Disk" />
+            <TextView
+                android:id="@+id/sv_2_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Semi"
+                android:textSize="11sp"
+                android:textColor="@color/text"
+                android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:weightSum="1"
+            android:background="@drawable/bg_f_stroke_r2"
+            android:orientation="horizontal">
+            <View android:id="@+id/sv_2_f"
+                android:layout_width="0dp"
+                android:layout_height="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

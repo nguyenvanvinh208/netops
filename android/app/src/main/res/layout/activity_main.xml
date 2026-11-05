@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <com.example.netops.GlowBackground android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!-- Cot noi dung: portrait = full width, landscape/tablet = giu dung kho 412dp o giua man hinh -->
+    <RelativeLayout
+        android:id="@+id/column"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <include android:id="@+id/bottom_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/view_bottom_nav" />
+        </LinearLayout>
+        <FrameLayout android:id="@+id/overlay_host"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <FrameLayout android:id="@+id/toast_host"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/toast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="11dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_f_card_s_greena50_w1_r99"
+                android:elevation="12dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <ImageView android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_check"
+                    android:tint="@color/green" />
+                <TextView
+                    android:id="@+id/toast_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Semi"
+                    android:textSize="13sp"
+                    android:textColor="@color/text"
+                    android:text="" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="4dp"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/gap_2"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/hdr_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="24sp"
+                android:textColor="@color/text"
+                android:text="Containers"
+                android:letterSpacing="-0.017" />
+            <TextView
+                android:id="@+id/hdr_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="13sp"
+                android:textColor="@color/muted"
+                android:text="" />
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/hdr_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_g_diag_r14"
+            android:elevation="10dp"
+            android:outlineAmbientShadowColor="#FF22D3EE"
+            android:outlineSpotShadowColor="#FF22D3EE">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_plus"
+                android:tint="@color/on_cyan" />
+        </FrameLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:divider="@drawable/gap_12"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/seg_cont"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:padding="4dp"
+                android:background="@drawable/bg_f_card_s_stroke_w1_r16"
+                android:divider="@drawable/gap_4"
+                android:showDividers="middle"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingHorizontal="16dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_f_card_s_stroke_w1_r16"
+                android:divider="@drawable/gap_10"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <ImageView android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_search"
+                    android:tint="@color/dim" />
+                <EditText
+                    android:id="@+id/ct_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Input"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:hint="Search containers…"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/chips_cont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal" />
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/T.Bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/text"
+                    android:text="Running containers" />
+                <TextView
+                    android:id="@+id/ct_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Med"
+                    android:textSize="12sp"
+                    android:textColor="@color/muted"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ct_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_12"
+                android:showDividers="middle"
+                android:orientation="vertical" />
+            <TextView
+                android:id="@+id/ct_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:paddingVertical="24dp"
+                android:layout_gravity="center_horizontal"
+                style="@style/T.Reg"
+                android:textSize="13sp"
+                android:textColor="@color/muted"
+                android:text="No containers match your filter" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

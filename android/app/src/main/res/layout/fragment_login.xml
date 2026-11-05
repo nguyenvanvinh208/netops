@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="18dp"
+        android:divider="@drawable/gap_22"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:divider="@drawable/gap_12"
+            android:showDividers="middle"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_g_diag_r14"
+                android:elevation="14dp"
+                android:outlineAmbientShadowColor="#FF22D3EE"
+                android:outlineSpotShadowColor="#FF22D3EE">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_shield"
+                    android:tint="@color/on_cyan" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="20sp"
+                android:textColor="@color/text"
+                android:text="NetOps"
+                android:letterSpacing="-0.015" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="18dp"
+            android:divider="@drawable/gap_8"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="34sp"
+                android:textColor="@color/text"
+                android:text="Sign in to\nyour console"
+                android:letterSpacing="-0.029"
+                android:lineSpacingMultiplier="1.01" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="15sp"
+                android:textColor="@color/muted"
+                android:text="Authenticate to control your servers, containers and databases."
+                android:lineSpacingMultiplier="1.20" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/gap_16"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Semi"
+                    android:textSize="12sp"
+                    android:textColor="@color/muted"
+                    android:text="EMAIL / ADMIN ID"
+                    android:letterSpacing="0.033" />
+                <LinearLayout
+                    android:id="@+id/lg_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:paddingHorizontal="16dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_f_card_s_stroke_w1_r16"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/lg_mail_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_mail"
+                        android:tint="@color/muted" />
+                    <EditText
+                        android:id="@+id/lg_mail_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Input"
+                        android:layout_weight="1"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:text="manh.admin@netops.io" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Semi"
+                    android:textSize="12sp"
+                    android:textColor="@color/muted"
+                    android:text="PASSWORD"
+                    android:letterSpacing="0.033" />
+                <LinearLayout
+                    android:id="@+id/lg_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:paddingHorizontal="16dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_f_card_s_stroke_w1_r16"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/lg_pass_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_lock"
+                        android:tint="@color/muted" />
+                    <EditText
+                        android:id="@+id/lg_pass_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Input"
+                        android:layout_weight="1"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:text="netops2026" />
+                    <ImageView
+                        android:id="@+id/lg_pass_eye"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_eye"
+                        android:tint="@color/muted" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:divider="@drawable/gap_10"
+            android:showDividers="middle"
+            android:orientation="horizontal">
+            <com.example.netops.NetToggle android:id="@+id/lg_toggle"
+                android:layout_width="48dp"
+                android:layout_height="28dp"
+                app:toggleOn="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Med"
+                android:textSize="14sp"
+                android:textColor="@color/text"
+                android:text="Remember session" />
+            <Space android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/lg_forgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Semi"
+                android:textSize="13sp"
+                android:textColor="@color/cyan"
+                android:text="Forgot password?" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lg_login"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/bg_g_h_r16"
+            android:elevation="14dp"
+            android:outlineAmbientShadowColor="#8022D3EE"
+            android:outlineSpotShadowColor="#8022D3EE"
+            android:divider="@drawable/gap_8"
+            android:showDividers="middle"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Semi"
+                android:textSize="16sp"
+                android:textColor="@color/on_cyan"
+                android:text="Login" />
+            <ImageView android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_next"
+                android:tint="@color/on_cyan" />
+        </LinearLayout>
+        <Space android:layout_height="12dp"
+            android:layout_width="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:divider="@drawable/gap_8"
+            android:showDividers="middle"
+            android:orientation="horizontal">
+            <ImageView android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_lock"
+                android:tint="@color/dim" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="12sp"
+                android:textColor="@color/dim"
+                android:text="End-to-end encrypted  ·  JWT  ·  TLS 1.3" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="14dp"
+    android:background="@drawable/bg_f_card_s_stroke_w1_r20"
+    android:divider="@drawable/gap_12"
+    android:showDividers="middle"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:divider="@drawable/gap_12"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+        <FrameLayout android:id="@+id/im_tile"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/bg_f_violeta14_r14">
+            <ImageView
+                android:id="@+id/im_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_box"
+                android:tint="@color/violet" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/gap_4"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/im_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="15sp"
+                android:textColor="@color/text"
+                android:text="" />
+            <TextView
+                android:id="@+id/im_digest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Mono"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:text="" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/im_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/bg_f_violeta14_r99"
+            style="@style/T.Semi"
+            android:textSize="11sp"
+            android:textColor="@color/violet"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/gap_14"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/im_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Med"
+            android:textSize="12sp"
+            android:textColor="@color/muted"
+            android:text="" />
+        <TextView
+            android:id="@+id/im_pushed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Med"
+            android:textSize="12sp"
+            android:textColor="@color/muted"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/im_deploy"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/bg_g_h_r16"
+        android:elevation="14dp"
+        android:outlineAmbientShadowColor="#8022D3EE"
+        android:outlineSpotShadowColor="#8022D3EE"
+        android:divider="@drawable/gap_8"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+        <ImageView android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_zap"
+            android:tint="@color/on_cyan" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Semi"
+            android:textSize="16sp"
+            android:textColor="@color/on_cyan"
+            android:text="Deploy Image" />
+    </LinearLayout>
+</LinearLayout>

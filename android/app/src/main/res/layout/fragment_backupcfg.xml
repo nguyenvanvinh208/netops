@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="4dp"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/gap_2"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/hdr_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="24sp"
+                android:textColor="@color/text"
+                android:text="Database"
+                android:letterSpacing="-0.017" />
+            <TextView
+                android:id="@+id/hdr_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="13sp"
+                android:textColor="@color/muted"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:divider="@drawable/gap_12"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/seg_db"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:padding="4dp"
+                android:background="@drawable/bg_f_card_s_stroke_w1_r16"
+                android:divider="@drawable/gap_4"
+                android:showDividers="middle"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:id="@+id/chips_db"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_f_card_s_stroke_w1_r20"
+                android:divider="@drawable/gap_12"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <FrameLayout android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/bg_f_cyana14_r14">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_archive"
+                        android:tint="@color/cyan" />
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:divider="@drawable/gap_4"
+                    android:showDividers="middle"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/text"
+                        android:text="Compress backup" />
+                    <TextView
+                        android:id="@+id/bc_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Reg"
+                        android:textSize="11sp"
+                        android:textColor="@color/muted"
+                        android:text="" />
+                </LinearLayout>
+                <com.example.netops.NetToggle android:id="@+id/bc_toggle"
+                    android:layout_width="48dp"
+                    android:layout_height="28dp"
+                    app:toggleOn="true" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                style="@style/T.Semi"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:text="STORAGE LOCATION"
+                android:letterSpacing="0.073" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_10"
+                android:showDividers="middle"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/bc_o0"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:paddingHorizontal="12dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_f_card_s_stroke_w1_r18"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/bc_o0_tile"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_f_cyana14_r12">
+                        <ImageView
+                            android:id="@+id/bc_o0_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_hdd"
+                            android:tint="@color/cyan" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:divider="@drawable/gap_3"
+                        android:showDividers="middle"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/bc_o0_t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Semi"
+                            android:textSize="14sp"
+                            android:textColor="@color/text"
+                            android:text="" />
+                        <TextView
+                            android:id="@+id/bc_o0_s"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Reg"
+                            android:textSize="11sp"
+                            android:textColor="@color/muted"
+                            android:text="" />
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/bc_o0_chk"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp">
+                        <ImageView
+                            android:id="@+id/bc_o0_chkicon"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_check"
+                            android:tint="@color/on_cyan" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/bc_o1"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:paddingHorizontal="12dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_f_card_s_stroke_w1_r18"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/bc_o1_tile"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_f_cyana14_r12">
+                        <ImageView
+                            android:id="@+id/bc_o1_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_hdd"
+                            android:tint="@color/cyan" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:divider="@drawable/gap_3"
+                        android:showDividers="middle"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/bc_o1_t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Semi"
+                            android:textSize="14sp"
+                            android:textColor="@color/text"
+                            android:text="" />
+                        <TextView
+                            android:id="@+id/bc_o1_s"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Reg"
+                            android:textSize="11sp"
+                            android:textColor="@color/muted"
+                            android:text="" />
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/bc_o1_chk"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp">
+                        <ImageView
+                            android:id="@+id/bc_o1_chkicon"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_check"
+                            android:tint="@color/on_cyan" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/bc_o2"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:paddingHorizontal="12dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_f_card_s_stroke_w1_r18"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/bc_o2_tile"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_f_cyana14_r12">
+                        <ImageView
+                            android:id="@+id/bc_o2_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_hdd"
+                            android:tint="@color/cyan" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:divider="@drawable/gap_3"
+                        android:showDividers="middle"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/bc_o2_t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Semi"
+                            android:textSize="14sp"
+                            android:textColor="@color/text"
+                            android:text="" />
+                        <TextView
+                            android:id="@+id/bc_o2_s"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Reg"
+                            android:textSize="11sp"
+                            android:textColor="@color/muted"
+                            android:text="" />
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/bc_o2_chk"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp">
+                        <ImageView
+                            android:id="@+id/bc_o2_chkicon"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_check"
+                            android:tint="@color/on_cyan" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                style="@style/T.Semi"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:text="SCHEDULE"
+                android:letterSpacing="0.073" />
+            <LinearLayout
+                android:id="@+id/bc_chips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="14dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_f_card_s_stroke_w1_r16"
+                android:divider="@drawable/gap_12"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <ImageView android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_clock"
+                    android:tint="@color/cyan" />
+                <TextView
+                    android:id="@+id/bc_runs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/T.Med"
+                    android:textSize="14sp"
+                    android:textColor="@color/muted"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/bc_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:background="@drawable/bg_f_cyana12_r10"
+                    style="@style/T.Mono"
+                    android:textSize="13sp"
+                    android:textColor="@color/cyan"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/bc_btn"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:background="@drawable/bg_g_h_r16"
+                android:elevation="12dp"
+                android:outlineAmbientShadowColor="#8022D3EE"
+                android:outlineSpotShadowColor="#8022D3EE"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <ImageView android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_database"
+                    android:tint="@color/on_cyan" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Semi"
+                    android:textSize="16sp"
+                    android:textColor="@color/on_cyan"
+                    android:text="Trigger Instant DB Backup" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

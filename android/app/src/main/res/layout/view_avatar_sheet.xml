@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/sh_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#C205080F"
+    android:clickable="true"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:id="@+id/sh_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_f_card_s_stroke_w1_rt28"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="34dp"
+        android:gravity="center_horizontal"
+        android:clickable="true"
+        android:divider="@drawable/gap_18"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <View android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:background="@drawable/bg_f_stroke_r2" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:divider="@drawable/gap_4"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="18sp"
+                android:textColor="@color/text"
+                android:text="Change avatar" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="12sp"
+                android:textColor="@color/muted"
+                android:text="Pick an icon for your admin profile" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/sh_avatars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+        <FrameLayout
+            android:id="@+id/sh_done"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_g_h_r16"
+            android:elevation="12dp"
+            android:outlineAmbientShadowColor="#8022D3EE"
+            android:outlineSpotShadowColor="#8022D3EE">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/T.Semi"
+                android:textSize="15sp"
+                android:textColor="@color/ink"
+                android:text="Done" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

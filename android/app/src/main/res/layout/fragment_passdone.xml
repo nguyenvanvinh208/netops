@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="10dp"
+            android:divider="@drawable/gap_24"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <Space android:layout_height="60dp"
+                android:layout_width="wrap_content" />
+            <FrameLayout android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:background="@drawable/bg_oval_f_greena14_s_greena40_w1">
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_check"
+                    android:tint="@color/green" />
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/hero_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/T.Bold"
+                    android:textSize="26sp"
+                    android:textColor="@color/text"
+                    android:text="Password updated"
+                    android:letterSpacing="-0.023" />
+                <TextView
+                    android:id="@+id/hero_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="290dp"
+                    android:gravity="center"
+                    style="@style/T.Reg"
+                    android:textSize="15sp"
+                    android:textColor="@color/muted"
+                    android:text="You can now sign in to your console with your new password."
+                    android:lineSpacingMultiplier="1.20" />
+            </LinearLayout>
+            <Space android:layout_height="160dp"
+                android:layout_width="wrap_content" />
+            <LinearLayout
+                android:id="@+id/pd_back"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:background="@drawable/bg_g_h_r16"
+                android:elevation="14dp"
+                android:outlineAmbientShadowColor="#8022D3EE"
+                android:outlineSpotShadowColor="#8022D3EE"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Semi"
+                    android:textSize="16sp"
+                    android:textColor="@color/on_cyan"
+                    android:text="Back to login" />
+                <ImageView android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_next"
+                    android:tint="@color/on_cyan" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
