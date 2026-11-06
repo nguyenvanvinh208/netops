@@ -1,0 +1,12 @@
+# Visual Studio / VS Code cache
+.vs/
+**/ .vs/
+bin/
+obj/
+*.user
+*.suo
+
+# Node / Android / Build caches
+node_modules/
+build/
+.gradle/
