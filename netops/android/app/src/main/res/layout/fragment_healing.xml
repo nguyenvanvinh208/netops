@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="4dp"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical"
+        android:divider="@drawable/gap_12"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+        <FrameLayout android:id="@+id/hdr_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_f_card_s_stroke_w1_r14">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"
+                android:tint="@color/text" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/gap_2"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/hdr_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="22sp"
+                android:textColor="@color/text"
+                android:text="Auto-healing"
+                android:letterSpacing="-0.018"
+                android:maxLines="1"
+                android:ellipsize="end" />
+            <TextView
+                android:id="@+id/hdr_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="12sp"
+                android:textColor="@color/muted"
+                android:text="Automatic recovery log"
+                android:maxLines="1"
+                android:ellipsize="end" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:divider="@drawable/gap_12"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_f_field_s_greena40_w1_r24"
+                android:divider="@drawable/gap_16"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <FrameLayout android:layout_width="84dp"
+                    android:layout_height="84dp">
+                    <com.example.netops.RingView
+                        android:id="@+id/hl_ring"
+                        android:layout_width="84dp"
+                        android:layout_height="84dp"
+                        app:ringColor="@color/green"
+                        app:ringTrack="@color/stroke"
+                        app:ringStroke="7dp"
+                        app:ringProgress="1.0"
+                        android:layout_gravity="center" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_check"
+                        android:tint="@color/green" />
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/gap_4"
+                    android:showDividers="middle"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Bold"
+                        android:textSize="34sp"
+                        android:textColor="@color/text"
+                        android:text="12" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Reg"
+                        android:textSize="13sp"
+                        android:textColor="@color/muted"
+                        android:text="recoveries today" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_f_greena14_r99"
+                        android:gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        style="@style/T.Semi"
+                        android:textSize="11sp"
+                        android:textColor="@color/green"
+                        android:text="100% SUCCESS" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                style="@style/T.Semi"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:text="TIMELINE" />
+            <LinearLayout
+                android:id="@+id/hl_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_12"
+                android:showDividers="middle"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

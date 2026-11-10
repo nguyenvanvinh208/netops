@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/al_root"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="14dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_f_card_s_stroke_w1_r20"
+    android:divider="@drawable/gap_12"
+    android:showDividers="middle"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <FrameLayout android:id="@+id/al_tile"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_f_reda14_r14">
+        <ImageView
+            android:id="@+id/al_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_warn"
+            android:tint="@color/red" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="@drawable/gap_4"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/al_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Semi"
+            android:textSize="14sp"
+            android:textColor="@color/text"
+            android:text=""
+            android:maxLines="1"
+            android:ellipsize="end" />
+        <TextView
+            android:id="@+id/al_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Reg"
+            android:textSize="11sp"
+            android:textColor="@color/muted"
+            android:text=""
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/al_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/T.Reg"
+        android:textSize="11sp"
+        android:textColor="@color/muted"
+        android:text="" />
+</LinearLayout>

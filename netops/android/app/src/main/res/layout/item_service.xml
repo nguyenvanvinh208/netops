@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/svc_root"
+    android:layout_width="match_parent"
+    android:layout_height="79dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="14dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_f_card_s_stroke_w1_r20"
+    android:divider="@drawable/gap_12"
+    android:showDividers="middle"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <FrameLayout android:id="@+id/svc_tile"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/bg_f_violeta14_r14">
+        <ImageView
+            android:id="@+id/svc_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_box"
+            android:tint="@color/violet" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="@drawable/gap_4"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/svc_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Bold"
+            android:textSize="15sp"
+            android:textColor="@color/text"
+            android:text="" />
+        <TextView
+            android:id="@+id/svc_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Reg"
+            android:textSize="11sp"
+            android:textColor="@color/muted"
+            android:text=""
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:divider="@drawable/gap_4"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:divider="@drawable/gap_3"
+            android:showDividers="middle"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/svc_ms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="20sp"
+                android:textColor="@color/green"
+                android:text="" />
+            <TextView
+                android:id="@+id/svc_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                style="@style/T.Reg"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:text="ms" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/svc_pill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/bg_f_greena14_r99"
+            style="@style/T.Semi"
+            android:textSize="11sp"
+            android:textColor="@color/green"
+            android:text="" />
+    </LinearLayout>
+</LinearLayout>

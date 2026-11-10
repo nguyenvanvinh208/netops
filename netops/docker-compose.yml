@@ -1,0 +1,48 @@
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: NetOpsDb
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d NetOpsDb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: ./backend/NetOps.Api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ConnectionStrings__DefaultConnection: Host=db;Database=NetOpsDb;Username=postgres;Password=${DB_PASSWORD}
+      JwtSettings__Secret: ${JWT_SECRET}
+      Monitoring__Servers__0__Name: ${SERVER1_NAME:-netops-server1}
+      Monitoring__Servers__0__Host: ${SERVER1_HOST}
+      Monitoring__Servers__1__Name: ${SERVER2_NAME:-netops-server2}
+      Monitoring__Servers__1__Host: ${SERVER2_HOST}
+    volumes:
+      - ${SSH_KEY_PATH:-/home/azureuser/.ssh/netops_monitor}:/run/secrets/netops_ssh_key:ro
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+
+volumes:
+  pgdata:
+  caddy_data:

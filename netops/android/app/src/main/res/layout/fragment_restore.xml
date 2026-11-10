@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="4dp"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/gap_2"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/hdr_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="24sp"
+                android:textColor="@color/text"
+                android:text="Database"
+                android:letterSpacing="-0.017" />
+            <TextView
+                android:id="@+id/hdr_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="13sp"
+                android:textColor="@color/muted"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:divider="@drawable/gap_12"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/seg_db"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:padding="4dp"
+                android:background="@drawable/bg_f_card_s_stroke_w1_r16"
+                android:divider="@drawable/gap_4"
+                android:showDividers="middle"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:id="@+id/chips_db"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_f_field_s_cyan_w1p5_r22"
+                android:elevation="12dp"
+                android:outlineAmbientShadowColor="#5922D3EE"
+                android:outlineSpotShadowColor="#5922D3EE"
+                android:divider="@drawable/gap_16"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <FrameLayout android:layout_width="84dp"
+                    android:layout_height="84dp">
+                    <com.example.netops.RingView
+                        android:id="@+id/rs_ring"
+                        android:layout_width="84dp"
+                        android:layout_height="84dp"
+                        app:ringColor="@color/cyan"
+                        app:ringTrack="@color/stroke"
+                        app:ringStroke="8dp"
+                        app:ringProgress="0"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:id="@+id/rs_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        style="@style/T.Bold"
+                        android:textSize="26sp"
+                        android:textColor="@color/text"
+                        android:text="" />
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/gap_5"
+                    android:showDividers="middle"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/text"
+                        android:text="restore points" />
+                    <TextView
+                        android:id="@+id/rs_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Reg"
+                        android:textSize="11sp"
+                        android:textColor="@color/muted"
+                        android:text="" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_f_greena14_r99"
+                        android:gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        style="@style/T.Semi"
+                        android:textSize="11sp"
+                        android:textColor="@color/green"
+                        android:text="100% VERIFIED" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/T.Bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/text"
+                    android:text="Snapshots" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Med"
+                    android:textSize="12sp"
+                    android:textColor="@color/muted"
+                    android:text="Newest first" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rs_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_12"
+                android:showDividers="middle"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

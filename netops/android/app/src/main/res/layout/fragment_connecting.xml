@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="24dp"
+            android:gravity="center"
+            android:divider="@drawable/gap_28"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <FrameLayout android:layout_width="200dp"
+                android:layout_height="200dp">
+                <View android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/bg_oval_s_cyana10_w1p5"
+                    android:layout_gravity="center" />
+                <View android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/bg_oval_f_cyana5_s_cyana20_w1p5"
+                    android:layout_gravity="center" />
+                <com.example.netops.RingView
+                    android:id="@+id/cn_spin"
+                    android:layout_width="124dp"
+                    android:layout_height="124dp"
+                    app:ringColor="@color/cyan"
+                    app:ringTrack="@color/stroke"
+                    app:ringStroke="6dp"
+                    app:ringProgress="0.2777777777777778"
+                    android:layout_gravity="center" />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_lock"
+                    android:tint="@color/cyan" />
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:divider="@drawable/gap_6"
+                android:showDividers="middle"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/cn_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/T.Bold"
+                    android:textSize="23sp"
+                    android:textColor="@color/text"
+                    android:text=""
+                    android:letterSpacing="-0.022" />
+                <TextView
+                    android:id="@+id/cn_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/T.Reg"
+                    android:textSize="14sp"
+                    android:textColor="@color/muted"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:background="@drawable/bg_f_panel_s_stroke_w1_r20"
+                android:divider="@drawable/gap_14"
+                android:showDividers="middle"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <FrameLayout android:layout_width="16dp"
+                        android:layout_height="16dp">
+                        <ImageView
+                            android:id="@+id/cn_s0_ok"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_check"
+                            android:tint="@color/green" />
+                        <ImageView
+                            android:id="@+id/cn_s0_spin"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_restart"
+                            android:tint="@color/cyan" />
+                        <View
+                            android:id="@+id/cn_s0_dot"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/bg_oval_f_dim"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+                    <TextView
+                        android:id="@+id/cn_s0_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Mono"
+                        android:textSize="13sp"
+                        android:textColor="@color/dim"
+                        android:text="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <FrameLayout android:layout_width="16dp"
+                        android:layout_height="16dp">
+                        <ImageView
+                            android:id="@+id/cn_s1_ok"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_check"
+                            android:tint="@color/green" />
+                        <ImageView
+                            android:id="@+id/cn_s1_spin"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_restart"
+                            android:tint="@color/cyan" />
+                        <View
+                            android:id="@+id/cn_s1_dot"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/bg_oval_f_dim"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+                    <TextView
+                        android:id="@+id/cn_s1_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Mono"
+                        android:textSize="13sp"
+                        android:textColor="@color/dim"
+                        android:text="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <FrameLayout android:layout_width="16dp"
+                        android:layout_height="16dp">
+                        <ImageView
+                            android:id="@+id/cn_s2_ok"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_check"
+                            android:tint="@color/green" />
+                        <ImageView
+                            android:id="@+id/cn_s2_spin"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_restart"
+                            android:tint="@color/cyan" />
+                        <View
+                            android:id="@+id/cn_s2_dot"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/bg_oval_f_dim"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+                    <TextView
+                        android:id="@+id/cn_s2_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Mono"
+                        android:textSize="13sp"
+                        android:textColor="@color/dim"
+                        android:text="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <FrameLayout android:layout_width="16dp"
+                        android:layout_height="16dp">
+                        <ImageView
+                            android:id="@+id/cn_s3_ok"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_check"
+                            android:tint="@color/green" />
+                        <ImageView
+                            android:id="@+id/cn_s3_spin"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_restart"
+                            android:tint="@color/cyan" />
+                        <View
+                            android:id="@+id/cn_s3_dot"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/bg_oval_f_dim"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+                    <TextView
+                        android:id="@+id/cn_s3_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Mono"
+                        android:textSize="13sp"
+                        android:textColor="@color/dim"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/cn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="36dp"
+            style="@style/T.Semi"
+            android:textSize="15sp"
+            android:textColor="@color/muted"
+            android:text="Cancel" />
+    </LinearLayout>
+</ScrollView>

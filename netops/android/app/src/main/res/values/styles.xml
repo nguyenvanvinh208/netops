@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kieu chu: T.Reg(400) T.Med(500) T.Semi(600) T.Bold(700) -->
+    <style name="T">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+    <style name="T.Reg"><item name="android:fontFamily">sans-serif</item></style>
+    <style name="T.Med"><item name="android:fontFamily">sans-serif-medium</item></style>
+    <style name="T.Semi"><item name="android:fontFamily">sans-serif-medium</item></style>
+    <style name="T.Bold">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="T.Mono"><item name="android:fontFamily">monospace</item></style>
+    <style name="T.MonoBold">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- O nhap lieu khong vien (vien nam o khung bao ngoai) -->
+    <style name="Input">
+        <item name="android:background">@null</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textColorHint">@color/dim</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_cyan</item>
+        <item name="android:importantForAutofill">no</item>
+    </style>
+</resources>

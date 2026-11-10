@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="13dp"
+    android:background="@drawable/bg_f_card_s_stroke_w1_r20"
+    android:divider="@drawable/gap_12"
+    android:showDividers="middle"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <FrameLayout android:id="@+id/hl_tile"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="@drawable/bg_f_cyana14_r12">
+        <ImageView
+            android:id="@+id/hl_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_restart"
+            android:tint="@color/cyan" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="@drawable/gap_3"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/hl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Semi"
+            android:textSize="14sp"
+            android:textColor="@color/text"
+            android:text="" />
+        <TextView
+            android:id="@+id/hl_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Reg"
+            android:textSize="11sp"
+            android:textColor="@color/muted"
+            android:text="" />
+        <TextView
+            android:id="@+id/hl_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Med"
+            android:textSize="11sp"
+            android:textColor="@color/green"
+            android:text="" />
+    </LinearLayout>
+</LinearLayout>

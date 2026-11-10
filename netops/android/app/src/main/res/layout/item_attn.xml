@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/attn_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="12dp"
+    android:paddingVertical="10dp"
+    android:gravity="center_vertical"
+    android:divider="@drawable/gap_10"
+    android:showDividers="middle"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <FrameLayout android:id="@+id/attn_tile"
+        android:layout_width="34dp"
+        android:layout_height="34dp">
+        <ImageView
+            android:id="@+id/attn_icon"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_warn"
+            android:tint="@color/red" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="@drawable/gap_2"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/attn_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Semi"
+            android:textSize="13sp"
+            android:textColor="@color/text"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="" />
+        <TextView
+            android:id="@+id/attn_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Reg"
+            android:textSize="11sp"
+            android:textColor="@color/muted"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_chevr"
+        android:tint="@color/dim" />
+</LinearLayout>

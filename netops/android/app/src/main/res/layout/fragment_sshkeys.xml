@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="4dp"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical"
+        android:divider="@drawable/gap_12"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+        <FrameLayout android:id="@+id/hdr_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_f_card_s_stroke_w1_r14">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"
+                android:tint="@color/text" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/gap_2"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/hdr_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="22sp"
+                android:textColor="@color/text"
+                android:text="SSH Keys"
+                android:letterSpacing="-0.018"
+                android:maxLines="1"
+                android:ellipsize="end" />
+            <TextView
+                android:id="@+id/hdr_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Reg"
+                android:textSize="12sp"
+                android:textColor="@color/muted"
+                android:text="Certificates for server access"
+                android:maxLines="1"
+                android:ellipsize="end" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/ssh_hdr_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_f_greena14_r99"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            style="@style/T.Semi"
+            android:textSize="11sp"
+            android:textColor="@color/green"
+            android:text="" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:divider="@drawable/gap_12"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@drawable/bg_f_card_s_stroke_w1_r20"
+                android:divider="@drawable/gap_14"
+                android:showDividers="middle"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <FrameLayout android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:background="@drawable/bg_f_cyana14_r14">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_key"
+                            android:tint="@color/cyan" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:divider="@drawable/gap_3"
+                        android:showDividers="middle"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Semi"
+                            android:textSize="14sp"
+                            android:textColor="@color/text"
+                            android:text="SSH-PRI-KEY" />
+                        <TextView
+                            android:id="@+id/ssh_key_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Reg"
+                            android:textSize="11sp"
+                            android:textColor="@color/muted"
+                            android:text="" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/ssh_key_chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:background="@drawable/bg_f_greena14_r99"
+                        style="@style/T.Semi"
+                        android:textSize="10sp"
+                        android:textColor="@color/green"
+                        android:text="" />
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/stroke" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:divider="@drawable/gap_6"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/T.Med"
+                        android:textSize="12sp"
+                        android:textColor="@color/muted"
+                        android:text="Fingerprint" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Mono"
+                        android:textSize="11sp"
+                        android:textColor="@color/text"
+                        android:text="SHA256:9f2c1a…a41e" />
+                    <ImageView
+                        android:id="@+id/ssh_copy"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_copy"
+                        android:tint="@color/cyan" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/T.Med"
+                        android:textSize="12sp"
+                        android:textColor="@color/muted"
+                        android:text="Last used" />
+                    <TextView
+                        android:id="@+id/ssh_last"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Semi"
+                        android:textSize="12sp"
+                        android:textColor="@color/text"
+                        android:text="" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/T.Med"
+                        android:textSize="12sp"
+                        android:textColor="@color/muted"
+                        android:text="Expires" />
+                    <TextView
+                        android:id="@+id/ssh_exp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/T.Semi"
+                        android:textSize="12sp"
+                        android:textColor="@color/text"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                style="@style/T.Semi"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:text="AUTHORIZED SERVERS"
+                android:letterSpacing="0.073" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@drawable/bg_f_card_s_stroke_w1_r20"
+                android:divider="@drawable/gap_12"
+                android:showDividers="middle"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <FrameLayout android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_f_bluea14_r12">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_server"
+                            android:tint="@color/blue" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:divider="@drawable/gap_3"
+                        android:showDividers="middle"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Semi"
+                            android:textSize="14sp"
+                            android:textColor="@color/text"
+                            android:text="Server 1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Reg"
+                            android:textSize="11sp"
+                            android:textColor="@color/muted"
+                            android:text="srv1.prod · 10.0.1.11" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/ssh_srv0_chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:background="@drawable/bg_f_greena14_r99"
+                        style="@style/T.Semi"
+                        android:textSize="10sp"
+                        android:textColor="@color/green"
+                        android:text="" />
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/stroke" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <FrameLayout android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_f_bluea14_r12">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_server"
+                            android:tint="@color/blue" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:divider="@drawable/gap_3"
+                        android:showDividers="middle"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Semi"
+                            android:textSize="14sp"
+                            android:textColor="@color/text"
+                            android:text="Server 2" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/T.Reg"
+                            android:textSize="11sp"
+                            android:textColor="@color/muted"
+                            android:text="srv2.prod · 10.0.1.12" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/ssh_srv1_chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:background="@drawable/bg_f_greena14_r99"
+                        style="@style/T.Semi"
+                        android:textSize="10sp"
+                        android:textColor="@color/green"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_f_ambera12_s_ambera50_w1_r14"
+                android:divider="@drawable/gap_10"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <ImageView android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_info"
+                    android:tint="@color/amber" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/T.Reg"
+                    android:textSize="12sp"
+                    android:textColor="@color/muted"
+                    android:lineSpacingMultiplier="1.15"
+                    android:text="Keys are uploaded and rotated on Web Admin. This app can only view status or revoke access." />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ssh_revoke"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:background="@drawable/bg_f_reda14_s_reda50_w1_r16"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <ImageView android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_trash"
+                    android:tint="@color/red" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Semi"
+                    android:textSize="16sp"
+                    android:textColor="@color/red"
+                    android:text="Revoke Active Key" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

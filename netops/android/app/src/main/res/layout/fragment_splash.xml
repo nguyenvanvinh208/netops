@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <FrameLayout android:layout_width="240dp"
+                android:layout_height="240dp">
+                <View android:layout_width="240dp"
+                    android:layout_height="240dp"
+                    android:background="@drawable/bg_oval_s_cyana10_w1p5"
+                    android:layout_gravity="center" />
+                <View android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/bg_oval_f_cyana4_s_cyana20_w1p5"
+                    android:layout_gravity="center" />
+                <FrameLayout
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:background="@drawable/bg_g_diag_r32"
+                    android:elevation="14dp"
+                    android:outlineAmbientShadowColor="#FF22D3EE"
+                    android:outlineSpotShadowColor="#FF22D3EE"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_shield"
+                        android:tint="@color/on_cyan" />
+                </FrameLayout>
+            </FrameLayout>
+            <Space android:layout_height="10dp"
+                android:layout_width="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Bold"
+                android:textSize="40sp"
+                android:textColor="@color/text"
+                android:text="NetOps"
+                android:letterSpacing="-0.025" />
+            <Space android:layout_height="10dp"
+                android:layout_width="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                style="@style/T.Reg"
+                android:textSize="15sp"
+                android:textColor="@color/muted"
+                android:text="Infrastructure control, in your pocket" />
+            <Space android:layout_height="28dp"
+                android:layout_width="wrap_content" />
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="4dp"
+                android:weightSum="1"
+                android:background="@drawable/bg_f_stroke_r2"
+                android:orientation="horizontal">
+                <View android:id="@+id/sp_fill"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_g_h_r2" />
+            </LinearLayout>
+            <Space android:layout_height="10dp"
+                android:layout_width="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <ImageView android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_lock"
+                    android:tint="@color/cyan" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Reg"
+                    android:textSize="12sp"
+                    android:textColor="@color/muted"
+                    android:text="Verifying JWT session token…" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp"
+            android:layout_gravity="center_horizontal"
+            style="@style/T.Reg"
+            android:textSize="11sp"
+            android:textColor="@color/dim"
+            android:text="v2.0.8  ·  Secured by JWT  ·  TLS 1.3"
+            android:letterSpacing="0.036" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/tp_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="8dp"
+    android:gravity="center_vertical"
+    android:divider="@drawable/gap_10"
+    android:showDividers="middle"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <FrameLayout android:id="@+id/tp_tile"
+        android:layout_width="28dp"
+        android:layout_height="28dp">
+        <ImageView
+            android:id="@+id/tp_icon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_box"
+            android:tint="@color/violet" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="@drawable/gap_1"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tp_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Semi"
+            android:textSize="13sp"
+            android:textColor="@color/text"
+            android:text="" />
+        <TextView
+            android:id="@+id/tp_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/T.Reg"
+            android:textSize="10sp"
+            android:textColor="@color/muted"
+            android:text="" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tp_cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/T.Bold"
+        android:textSize="13sp"
+        android:textColor="@color/text"
+        android:text="" />
+</LinearLayout>

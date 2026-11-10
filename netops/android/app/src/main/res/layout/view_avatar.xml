@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        style="@style/T.Bold"
+        android:textSize="26sp"
+        android:textColor="@color/ink"
+        android:text="M" />
+    <ImageView
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:src="@drawable/ic_shield"
+        android:tint="@color/ink" />
+</FrameLayout>

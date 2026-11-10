@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,UselessParent,UnusedAttribute,ContentDescription,Autofill,LabelFor,TextFields,RtlSymmetry,UseCompoundDrawables,ObsoleteLayoutParam">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:orientation="vertical">
+        <FrameLayout android:id="@+id/hdr_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_f_card_s_stroke_w1_r14">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"
+                android:tint="@color/text" />
+        </FrameLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="10dp"
+            android:divider="@drawable/gap_24"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <Space android:layout_height="4dp"
+                android:layout_width="wrap_content" />
+            <FrameLayout android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:background="@drawable/bg_oval_f_cyana10_s_cyana35_w1">
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_shield"
+                    android:tint="@color/cyan" />
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/hero_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/T.Bold"
+                    android:textSize="26sp"
+                    android:textColor="@color/text"
+                    android:text="Forgot password?"
+                    android:letterSpacing="-0.023" />
+                <TextView
+                    android:id="@+id/hero_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="290dp"
+                    android:gravity="center"
+                    style="@style/T.Reg"
+                    android:textSize="15sp"
+                    android:textColor="@color/muted"
+                    android:text="Enter your admin email and we will send a 6-digit reset code."
+                    android:lineSpacingMultiplier="1.20" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Semi"
+                    android:textSize="12sp"
+                    android:textColor="@color/muted"
+                    android:text="EMAIL / ADMIN ID"
+                    android:letterSpacing="0.033" />
+                <LinearLayout
+                    android:id="@+id/fg_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:paddingHorizontal="16dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_f_card_s_stroke_w1_r16"
+                    android:divider="@drawable/gap_12"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/fg_in_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_mail"
+                        android:tint="@color/muted" />
+                    <EditText
+                        android:id="@+id/fg_in_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Input"
+                        android:layout_weight="1"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:text="manh.admin@netops.io" />
+                </LinearLayout>
+            </LinearLayout>
+            <Space android:layout_height="8dp"
+                android:layout_width="wrap_content" />
+            <LinearLayout
+                android:id="@+id/fg_send"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:background="@drawable/bg_g_h_r16"
+                android:elevation="14dp"
+                android:outlineAmbientShadowColor="#8022D3EE"
+                android:outlineSpotShadowColor="#8022D3EE"
+                android:divider="@drawable/gap_8"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/T.Semi"
+                    android:textSize="16sp"
+                    android:textColor="@color/on_cyan"
+                    android:text="Send reset code" />
+                <ImageView android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_next"
+                    android:tint="@color/on_cyan" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/fg_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/T.Semi"
+                android:textSize="14sp"
+                android:textColor="@color/cyan"
+                android:text="Back to login" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

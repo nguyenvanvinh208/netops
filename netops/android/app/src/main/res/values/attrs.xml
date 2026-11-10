@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RingView">
+        <attr name="ringColor" format="color" />
+        <attr name="ringTrack" format="color" />
+        <attr name="ringStroke" format="dimension" />
+        <attr name="ringProgress" format="float" />
+    </declare-styleable>
+    <declare-styleable name="NetToggle">
+        <attr name="toggleOn" format="boolean" />
+    </declare-styleable>
+</resources>
