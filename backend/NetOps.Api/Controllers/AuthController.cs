@@ -321,8 +321,9 @@ namespace NetOps.Api.Controllers
 				new Claim(ClaimTypes.Role, user.Role)
 			};
 
-			var jwtKey = _configuration["JwtSettings:Secret"] ?? "SuperDefaultSecretKey123456";
-			var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
+            var jwtKey = _configuration["JwtSettings:Secret"]
+    ?? throw new InvalidOperationException("Thiếu JwtSettings:Secret");
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
 			var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
 			var tokenDescriptor = new SecurityTokenDescriptor

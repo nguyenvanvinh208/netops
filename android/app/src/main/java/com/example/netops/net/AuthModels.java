@@ -12,10 +12,7 @@ public final class AuthModels {
         public String email, password, deviceName;
         public LoginRequest(String email, String password, String deviceName) { this.email = email; this.password = password; this.deviceName = deviceName; }
     }
-    public static class RegisterRequest {
-        public String email, password;
-        public RegisterRequest(String email, String password) { this.email = email; this.password = password; }
-    }
+
     public static class VerifyEmailRequest {
         public String email, code, deviceName;
         public VerifyEmailRequest(String email, String code, String deviceName) { this.email = email; this.code = code; this.deviceName = deviceName; }

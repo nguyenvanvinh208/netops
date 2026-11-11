@@ -7,9 +7,8 @@ import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 public interface ApiService {
-    // ----- đăng ký / đăng nhập -----
-    @POST("api/Auth/register")
-    Call<AuthModels.Msg> register(@Body AuthModels.RegisterRequest body);
+    // đăng nhập -----
+
 
     @POST("api/Auth/verify-email")
     Call<AuthModels.Tokens> verifyEmail(@Body AuthModels.VerifyEmailRequest body);

@@ -19,8 +19,9 @@ namespace NetOps.Api.Services
 		public AuthCodeService(AppDbContext db, IConfiguration cfg)
 		{
 			_db = db;
-			_key = Encoding.UTF8.GetBytes(cfg["JwtSettings:Secret"] ?? "SuperDefaultSecretKey123456");
-		}
+            _key = Encoding.UTF8.GetBytes(cfg["JwtSettings:Secret"]
+    ?? throw new InvalidOperationException("Thiếu JwtSettings:Secret"));
+        }
 
 		private string Hash(string email, string purpose, string secret)
 			=> Convert.ToHexString(HMACSHA256.HashData(_key, Encoding.UTF8.GetBytes($"{email}|{purpose}|{secret}")));

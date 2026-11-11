@@ -1,26 +1,9 @@
 services:
-  db:
-    image: postgres:16
-    restart: unless-stopped
-    environment:
-      POSTGRES_DB: NetOpsDb
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d NetOpsDb"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-
   api:
     build: ./backend/NetOps.Api
     restart: unless-stopped
-    depends_on:
-      db:
-        condition: service_healthy
     environment:
-      ConnectionStrings__DefaultConnection: Host=db;Database=NetOpsDb;Username=postgres;Password=${DB_PASSWORD}
+      ConnectionStrings__DefaultConnection: Host=${DB_HOST};Database=NetOpsDb;Username=postgres;Password=${DB_PASSWORD}
       JwtSettings__Secret: ${JWT_SECRET}
       Smtp__User: ${SMTP_USER:-}
       Smtp__Password: ${SMTP_PASSWORD:-}
@@ -46,5 +29,4 @@ services:
       - caddy_data:/data
 
 volumes:
-  pgdata:
   caddy_data:
