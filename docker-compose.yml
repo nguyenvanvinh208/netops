@@ -7,6 +7,7 @@ services:
       JwtSettings__Secret: ${JWT_SECRET}
       Smtp__User: ${SMTP_USER:-}
       Smtp__Password: ${SMTP_PASSWORD:-}
+      Logging__LogLevel__Microsoft.AspNetCore.Hosting.Diagnostics: Information
       Monitoring__Servers__0__Name: ${SERVER1_NAME:-netops-server1}
       Monitoring__Servers__0__Host: ${SERVER1_HOST}
       Monitoring__Servers__1__Name: ${SERVER2_NAME:-netops-server2}
