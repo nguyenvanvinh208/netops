@@ -17,5 +17,9 @@ namespace NetOps.Api.Models
 
 		[Required]
 		public string Role { get; set; } = "Operator"; // Mặc định là Operator
+
+		// true = vừa đăng ký, chưa nhập mã xác minh email (chưa được đăng nhập)
+		// Tài khoản cũ có sẵn trong DB sẽ mặc định false = đã xác minh, vẫn đăng nhập bình thường.
+		public bool EmailPending { get; set; } = false;
 	}
 }

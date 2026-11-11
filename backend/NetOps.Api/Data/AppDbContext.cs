@@ -8,7 +8,15 @@ namespace NetOps.Api.Data
         // Constructor bắt buộc phải có để nhận cấu hình kết nối từ Program.cs
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        // Báo cho EF Core biết là cần tạo bảng Users trong Database dựa trên class User
         public DbSet<User> Users { get; set; }
+        public DbSet<AuthCode> AuthCodes { get; set; }
+        public DbSet<DeviceSession> DeviceSessions { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder b)
+        {
+            b.Entity<AuthCode>().HasIndex(c => new { c.Email, c.Purpose });
+            b.Entity<DeviceSession>().HasIndex(s => s.TokenHash).IsUnique();
+            b.Entity<DeviceSession>().HasIndex(s => s.UserId);
+        }
     }
 }

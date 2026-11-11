@@ -21,6 +21,11 @@ builder.Services.AddMemoryCache();
 builder.Services.Configure<NetOps.Api.Services.MonitoringOptions>(builder.Configuration.GetSection("Monitoring"));
 builder.Services.AddSingleton<NetOps.Api.Services.ServerMonitor>();
 
+// Gửi email OTP (Gmail SMTP) + tạo/kiểm tra mã xác minh
+builder.Services.Configure<NetOps.Api.Services.SmtpOptions>(builder.Configuration.GetSection("Smtp"));
+builder.Services.AddScoped<NetOps.Api.Services.IEmailSender, NetOps.Api.Services.EmailSender>();
+builder.Services.AddScoped<NetOps.Api.Services.AuthCodeService>();
+
 // CẤU HÌNH JWT AUTHENTICATION (BẮT BUỘC ĐỂ DÙNG [Authorize])
 builder.Services.AddAuthentication(options =>
 {
