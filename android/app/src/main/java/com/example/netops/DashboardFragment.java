@@ -1,5 +1,7 @@
 package com.example.netops;
 
+import static android.util.Log.v;
+
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;

@@ -95,7 +95,7 @@
                     style="@style/T.Semi"
                     android:textSize="12sp"
                     android:textColor="@color/muted"
-                    android:text="EMAIL / ADMIN ID"
+                    android:text="EMAIL"
                     android:letterSpacing="0.033" />
                 <LinearLayout
                     android:id="@+id/fg_in"
@@ -120,8 +120,7 @@
                         style="@style/Input"
                         android:layout_weight="1"
                         android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        android:text="manh.admin@netops.io" />
+                        android:maxLines="1" />
                 </LinearLayout>
             </LinearLayout>
             <Space android:layout_height="8dp"

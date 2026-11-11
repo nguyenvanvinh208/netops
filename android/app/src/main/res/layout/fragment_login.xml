@@ -89,7 +89,7 @@
                     style="@style/T.Semi"
                     android:textSize="12sp"
                     android:textColor="@color/muted"
-                    android:text="EMAIL / ADMIN ID"
+                    android:text="EMAIL"
                     android:letterSpacing="0.033" />
                 <LinearLayout
                     android:id="@+id/lg_mail"
@@ -114,8 +114,7 @@
                         style="@style/Input"
                         android:layout_weight="1"
                         android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        android:text="manh.admin@netops.io" />
+                        android:maxLines="1" />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -155,8 +154,7 @@
                         style="@style/Input"
                         android:layout_weight="1"
                         android:inputType="textPassword"
-                        android:maxLines="1"
-                        android:text="netops2026" />
+                        android:maxLines="1" />
                     <ImageView
                         android:id="@+id/lg_pass_eye"
                         android:layout_width="20dp"

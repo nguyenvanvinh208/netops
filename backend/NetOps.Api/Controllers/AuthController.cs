@@ -104,9 +104,10 @@ namespace NetOps.Api.Controllers
 			});
 		}
 
-		// ---------- ĐĂNG KÝ + XÁC MINH EMAIL ----------
+		// ---------- ADMIN TẠO TÀI KHOẢN ----------
 
-		// POST: api/Auth/register  -> tạo tài khoản "chờ xác minh" và gửi mã 6 số qua email
+		// POST: api/Auth/register  -> CHỈ Admin được gọi. Tài khoản tạo xong dùng được ngay.
+		[Authorize(Roles = "Admin")]
 		[HttpPost("register")]
 		public async Task<IActionResult> Register([FromBody] RegisterDto request)
 		{
@@ -115,24 +116,25 @@ namespace NetOps.Api.Controllers
 			if (!PasswordOk(request.Password))
 				return BadRequest(new { message = "Mật khẩu tối thiểu 8 ký tự, gồm cả chữ và số." });
 
-			var user = await FindUser(email);
-			if (user != null && !user.EmailPending)
-				return Conflict(new { message = "Email đã được đăng ký. Hãy đăng nhập." });
+			string[] roles = { "Admin", "Operator", "Viewer" };
+			string role = roles.FirstOrDefault(r => string.Equals(r, request.Role, StringComparison.OrdinalIgnoreCase)) ?? "Operator";
 
-			string hash = BCrypt.Net.BCrypt.HashPassword(request.Password);
-			if (user == null)
+			if (await FindUser(email) != null)
+				return Conflict(new { message = "Email đã tồn tại trong hệ thống." });
+
+			var user = new User
 			{
-				user = new User { Email = email, PasswordHash = hash, Role = "User", EmailPending = true };
-				_context.Users.Add(user);
-			}
-			else
-			{
-				user.PasswordHash = hash; // đăng ký lại khi chưa xác minh: lấy mật khẩu mới nhất
-			}
+				Email = email,
+				PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
+				Role = role,
+				EmailPending = false
+			};
+			_context.Users.Add(user);
 			await _context.SaveChangesAsync();
-
-			return await SendCode(email, "verify", $"Đã gửi mã xác minh tới {email}.");
+			return Ok(new { message = "Đã tạo tài khoản.", id = user.Id, email = user.Email, role = user.Role });
 		}
+
+		// ---------- XÁC MINH EMAIL (giữ lại cho tài khoản cũ chưa xác minh) ----------
 
 		// POST: api/Auth/verify-email  -> nhập đúng mã thì kích hoạt tài khoản và đăng nhập luôn
 		[HttpPost("verify-email")]

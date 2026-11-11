@@ -126,8 +126,7 @@
                             style="@style/Input"
                             android:layout_weight="1"
                             android:inputType="textPassword"
-                            android:maxLines="1"
-                            android:text="Netops@2026" />
+                            android:maxLines="1" />
                         <ImageView
                             android:id="@+id/np1_eye"
                             android:layout_width="20dp"
@@ -173,8 +172,7 @@
                             style="@style/Input"
                             android:layout_weight="1"
                             android:inputType="textPassword"
-                            android:maxLines="1"
-                            android:text="Netops@2026" />
+                            android:maxLines="1" />
                         <ImageView
                             android:id="@+id/np2_eye"
                             android:layout_width="20dp"

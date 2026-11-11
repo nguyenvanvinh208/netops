@@ -10,6 +10,7 @@ public final class Router {
         BaseFragment f;
         switch (r.id) {
             case "login": f = new LoginFragment(); break;
+            case "verifyemail": f = new VerifyEmailFragment(); break;
             case "otp": f = new OtpFragment(); break;
             case "env": f = new EnvFragment(); break;
             case "connecting": f = new ConnectingFragment(); break;

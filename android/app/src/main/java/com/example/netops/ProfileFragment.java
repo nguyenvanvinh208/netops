@@ -17,7 +17,7 @@ public class ProfileFragment extends BaseFragment {
         tap(R.id.pf_avatar_box, this::openSheet);
         tap(R.id.pf_link_ssh, () -> nav().go("sshkeys"));
         tap(R.id.pf_link_set, () -> nav().go("settings"));
-        tap(R.id.pf_logout, () -> nav().replace("login"));
+        tap(R.id.pf_logout, () -> { com.example.netops.net.Session.logout(); nav().replace("login"); });
     }
 
     /** Bang chon avatar (lop phu day man hinh). */
